@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="expense.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+
+  <body>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <button class="primeBtn" id="premium">buy premium</button>
+    <div id="primeUser">
+      <button class="primeBtn" id="leadboard">show leadBoard</button>
+      <button class="primeBtn" id="daytoday">
+        <a href="http://127.0.0.1:5500/frontend/incomes-and-expenses/income.html">day to day</a>
+      </button>
+      <button class="primeBtn" id="downloadhistory">download history</button>
+    </div>
+    <div class="primeUserList">
+      <ul id="board">
+        <h3>Lead-Board</h3>
+      </ul>
+      <ul id="downloadList">
+        <h3>downloaded</h3>
+      </ul>
+    </div>
+
+
+    <div class="conaitaner">
+
+      <form class='form' id="submitForm">
+        <input type="text" id="description" placeholder="description" required>
+        <input type="number" id="price" placeholder="price" required>
+        <input type="text" id="category" placeholder="category" required>
+        <button class="btn" id="exepenseBtn" type="submit">add expense</button>
+      </form>
+
+      <form class='form' id="editForm">
+        <input type="text" id="newdescription" placeholder="newdescription" required>
+        <input type="number" id="newprice" placeholder="newprice" required>
+        <input type="text" id="newcategory" placeholder="newcategory" required>
+        <button class="btn" id="updateBtn" type="update">update expense</button>
+      </form>
+      <table id="tableItems" class="table">
+        <tr>
+          <th>description</th>
+          <th>price</th>
+          <th>category</th>
+          <th>button</th>
+        </tr>
+        <!-- <tr>
+          <td class="withDesc">fgh</td>
+          <td class="withPrice">$ghj</td>
+          <td class="withcat">zxc</td>
+          <td><button class="Btn1">delete</button></td>
+        </tr> -->
+      </table>
+      <div id="buttonsfor">
+        <div class="dropdown" id="giveclose">
+          <button onclick="myFunction()" class="dropbtn">number of rows</button>
+          <div id="myDropdown" class="dropdown-content">
+            <br><button class="btn" onclick="rowSide(5)">5</button>
+            <br><button class="btn" onclick="rowSide(10)">10</button>
+            <br><button class="btn" onclick="rowSide(15)">15</button>
+            <br><button class="btn" onclick="rowSide(25)">25</button>
+          </div>
+        </div>
+        <button onclick="showData(0)">1</button>
+      </div>
+
+    </div>
+    <script src="expense.js"></script>
+  </body>
+
+</html>
